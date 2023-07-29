@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список задач и сообщений</title>
+</head>
+<body>
+    <h1>Список задач</h1>
+    <ul>
+        {% for task in tasks %}
+        <li>{{ task['task_name'] }}</li>
+        <ul>
+            <li>{{ task['comment'] }}</li>
+        </ul>
+        {% endfor %}
+    </ul>
+</body>
+</html>
